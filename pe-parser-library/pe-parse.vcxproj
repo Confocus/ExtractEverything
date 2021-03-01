@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{06AAC36E-5DFC-3109-AB2D-19F4CA908D82}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>pe-parse</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pe-parse.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pe-parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pe-parse.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pe-parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pe-parse.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pe-parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pe-parse.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pe-parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;./</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\unshield-master\build;D:\WangTeng\code\unshield-master\win32_msvc;D:\WangTeng\code\lib7zip-master\lib7zip-master\src;D:\WangTeng\code\7z1900-src\CPP\;D:\WangTeng\code\lzma1900;./include/pe-parse;D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>BUILD_DLL;HAVE_CONFIG_H;WIN32;_WINDOWS;PEPARSE_VERSION="1.2.0";CMAKE_INTDIR="Debug";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;PEPARSE_VERSION=\"1.2.0\";CMAKE_INTDIR=\"Debug\";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Debug/exports.def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Debug//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>zlibstat.lib;libunshield.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;bit7z_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\WangTeng\code\zlib-1.2.11\contrib\vstudio\vc14\x86\ZlibStatDebug;D:\WangTeng\code\unshield-master\build\lib\md5\Debug;D:\WangTeng\code\unshield-master\build\lib\convert_utf\Debug;D:\WangTeng\code\unshield-master\build\lib\Debug;%(AdditionalLibraryDirectories);D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\Debug</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /SAFESEH:NO</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/Debug/pe-parse.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Debug/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/Debug/pe-parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION="1.2.0";CMAKE_INTDIR="Release";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION=\"1.2.0\";CMAKE_INTDIR=\"Release\";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Release/exports.def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Release//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/Release/pe-parse.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/Release/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/Release/pe-parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION="1.2.0";CMAKE_INTDIR="MinSizeRel";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION=\"1.2.0\";CMAKE_INTDIR=\"MinSizeRel\";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/MinSizeRel/exports.def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/MinSizeRel//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/MinSizeRel/pe-parse.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/MinSizeRel/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/MinSizeRel/pe-parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>true</EnablePREfast>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION="1.2.0";CMAKE_INTDIR="RelWithDebInfo";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PEPARSE_VERSION=\"1.2.0\";CMAKE_INTDIR=\"RelWithDebInfo\";pe_parse_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E __create_def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/RelWithDebInfo/exports.def D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/RelWithDebInfo//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/RelWithDebInfo/pe-parse.lib</ImportLibrary>
+      <ModuleDefinitionFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/pe-parse.dir/RelWithDebInfo/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>D:/WangTeng/code/pe-parse-master2/pe-parse-master/pe-parser-library/RelWithDebInfo/pe-parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AdvancedInstallerUnpacker.cpp" />
+    <ClCompile Include="BaseUnpacker.cpp" />
+    <ClCompile Include="C7zip.cpp" />
+    <ClCompile Include="C7zOffical.cpp" />
+    <ClCompile Include="C7zOfficalUnpacker.cpp" />
+    <ClCompile Include="CmdLineParser.cpp" />
+    <ClCompile Include="DotnetInstallerUnpacker.cpp" />
+    <ClCompile Include="export.cpp" />
+    <ClCompile Include="FileAssist.cpp" />
+    <ClCompile Include="GenteeUnpacker.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="InnoUnpacker.cpp" />
+    <ClCompile Include="ipackermatch.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MoleBoxUnpacker.cpp" />
+    <ClCompile Include="MSIUnpacker.cpp" />
+    <ClCompile Include="NestedPEUnpacker.cpp" />
+    <ClCompile Include="NSISInstallerUpacker.cpp" />
+    <ClCompile Include="SetupFactory.cpp" />
+    <ClCompile Include="ShieldInstUnpacker.cpp" />
+    <ClCompile Include="SmartInstUnpacker.cpp" />
+    <ClCompile Include="src\unshield.c" />
+    <ClCompile Include="UnpackManager.cpp" />
+    <ClCompile Include="ViseUnpacker.cpp" />
+    <ClCompile Include="WinRar.cpp" />
+    <ClCompile Include="WinZip.cpp" />
+    <ClCompile Include="WiseInstallerUnpacker.cpp" />
+    <ClCompile Include="ZipSfxUnpacker.cpp" />
+    <ClInclude Include="AdvancedInstallerUnpacker.h" />
+    <ClInclude Include="BaseUnpacker.h" />
+    <ClInclude Include="C7zip.h" />
+    <ClInclude Include="C7zOffical.h" />
+    <ClInclude Include="C7zOfficalUnpacker.h" />
+    <ClInclude Include="cabfile.h" />
+    <ClInclude Include="CmdLineParser.h" />
+    <ClInclude Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include\pe-parse\parse.h" />
+    <ClInclude Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include\pe-parse\nt-headers.h" />
+    <ClInclude Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\include\pe-parse\to_string.h" />
+    <ClCompile Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\src\buffer.cpp" />
+    <ClCompile Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\src\parse.cpp" />
+    <ClCompile Include="D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\src\unicode_winapi.cpp" />
+    <ClInclude Include="DotnetInstallerUnpacker.h" />
+    <ClInclude Include="export.h" />
+    <ClInclude Include="FileAssist.h" />
+    <ClInclude Include="GenteeUnpacker.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="InnoUnpacker.h" />
+    <ClInclude Include="internal.h" />
+    <ClInclude Include="ipackermatch.h" />
+    <ClInclude Include="iunpacker.h" />
+    <ClInclude Include="libunshield.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="MoleBoxUnpacker.h" />
+    <ClInclude Include="MSIUnpacker.h" />
+    <ClInclude Include="NestedPEUnpacker.h" />
+    <ClInclude Include="NSISInstallerUpacker.h" />
+    <ClInclude Include="SetupFactory.h" />
+    <ClInclude Include="ShieldInstUnpacker.h" />
+    <ClInclude Include="SmartInstUnpacker.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UnpackManager.h" />
+    <ClInclude Include="ViseUnpacker.h" />
+    <ClInclude Include="WinRar.h" />
+    <ClInclude Include="WinZip.h" />
+    <ClInclude Include="WiseInstallerUnpacker.h" />
+    <ClInclude Include="ZipSfxUnpacker.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
