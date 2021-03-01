@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(D:\WangTeng\code\7z1900-src\CPP\7zip\Archive\7z\.\Debug\7z.dll) does not match the Linker's OutputFile property value (C:\Program Files\7-zip\Formats\7z.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+    正在创建库 .\Debug\7z.lib 和对象 .\Debug\7z.exp
+  7z.vcxproj -> D:\WangTeng\code\7z1900-src\CPP\7zip\Archive\7z\.\Debug\7z.dll
+  7z.vcxproj -> .\Debug\7z.pdb (Full PDB)

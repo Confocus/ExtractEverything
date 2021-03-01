@@ -1,0 +1,25 @@
+﻿  Precomp.c
+  7zMain.c
+  Ppmd7Dec.c
+  Ppmd7.c
+  LzmaDec.c
+  Lzma2Dec.c
+  Delta.c
+  CpuArch.c
+  BraIA64.c
+  Bra86.c
+  Bra.c
+  Bcj2.c
+  7zStream.c
+  7zFile.c
+  7zCrcOpt.c
+  7zCrc.c
+  7zBuf.c
+  7zArcIn.c
+  7zAlloc.c
+  正在生成代码...
+  7zDec.c
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(D:\WangTeng\code\7z1900-src\C\Util\7z\.\Debug\7z.exe) does not match the Linker's OutputFile property value (c:\util\7zDec.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1191,5): warning MSB8012: TargetName(7z) does not match the Linker's OutputFile property value (7zDec). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+  7z.vcxproj -> D:\WangTeng\code\7z1900-src\C\Util\7z\.\Debug\7z.exe
+  7z.vcxproj -> .\Debug\7z.pdb (Full PDB)

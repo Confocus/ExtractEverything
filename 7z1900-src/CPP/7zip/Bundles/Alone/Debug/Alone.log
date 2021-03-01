@@ -1,0 +1,233 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(936,5): warning MSB8027: Two or more files with the name of stdafx.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are ..\..\..\..\..\lib7zip-master\lib7zip-master\test\stdafx.cpp, StdAfx.cpp.
+  MainAr.cpp
+  Main.cpp
+..\..\UI\Console\Main.cpp(492): warning C4100: “args”: 未引用的形参
+..\..\UI\Console\Main.cpp(492): warning C4100: “numArgs”: 未引用的形参
+..\..\UI\Console\Main.cpp(1213): warning C4474: printf: 格式字符串中传递的参数太多
+  ..\..\UI\Console\Main.cpp(1213): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+..\..\UI\Console\Main.cpp(1227): warning C4474: printf: 格式字符串中传递的参数太多
+  ..\..\UI\Console\Main.cpp(1227): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+..\..\UI\Console\Main.cpp(1160): warning C4189: “bIsPE”: 局部变量已初始化但不引用
+  List.cpp
+  OpenArchive.cpp
+  LoadCodecs.cpp
+  Extract.cpp
+  ArchiveCommandLine.cpp
+  test_archive.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\test_archive.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7ZipSignature.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7ZipSignature.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7ZipRar5.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7ZipRar5.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  test7zipprops.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\test7zipprops.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7ZipMulti.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7ZipMulti.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7ZipDmg.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7ZipDmg.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7ZipCryptFileName.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7ZipCryptFileName.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7Zip2.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7Zip2.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  Test7Zip.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\Test7Zip.cpp(5): fatal error C1083: 无法打开包括文件: “lib7zip.h”: No such file or directory
+  stdafx.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\test\stdafx.cpp(5): fatal error C1854: 无法覆盖在创建对象文件“d:\wangteng\code\7z1900-src\cpp\7zip\bundles\alone\debug\stdafx.obj”的预编译头过程中形成的信息
+  OSFunctions_Win32.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\OSFunctions_Win32.cpp(105): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  OSFunctions_UnixLike.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\OSFunctions_UnixLike.cpp(206): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  OSFunctions_OS2.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\OSFunctions_OS2.cpp(158): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  正在生成代码...
+d:\wangteng\code\7z1900-src\cpp\7zip\ui\console\main.cpp(1193): warning C4706: 条件表达式内的赋值
+  正在编译...
+  HelperFuncs.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\HelperFuncs.cpp(331): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipOpenArchive.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipOpenArchive.cpp(310): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipObjectPtrArray.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipObjectPtrArray.cpp(30): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7zipLibrary.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7zipLibrary.cpp(216): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipInStreamWrapper.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipInStreamWrapper.cpp(39): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipFormatInfo.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipFormatInfo.cpp(24): warning C4005: “NArchiveEnumPrefix”: 宏重定义
+  ..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipFormatInfo.cpp(22): note: 参见“NArchiveEnumPrefix”的前一个定义
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipFormatInfo.cpp(206): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipDllHandler.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipDllHandler.cpp(34): warning C4005: “myT”: 宏重定义
+  ..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipDllHandler.cpp(32): note: 参见“myT”的前一个定义
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipDllHandler.cpp(145): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipCompressCodecsInfo.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipCompressCodecsInfo.cpp(116): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipCodecInfo.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipCodecInfo.cpp(97): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipArchiveOpenCallback.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipArchiveOpenCallback.cpp(103): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipArchiveItem.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipArchiveItem.cpp(304): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  7ZipArchive.cpp
+..\..\..\..\..\lib7zip-master\lib7zip-master\src\7ZipArchive.cpp(495): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "StdAfx.h"”?
+  正在生成代码...
+  正在编译...
+  UserInputUtils.cpp
+  UpdateCallbackConsole.cpp
+  PercentPrinter.cpp
+  OpenCallbackConsole.cpp
+  HashCon.cpp
+  ExtractCallbackConsole.cpp
+  BenchCon.cpp
+  UpdateProduce.cpp
+  UpdatePair.cpp
+  UpdateCallback.cpp
+  Update.cpp
+  TempFiles.cpp
+  SortUtils.cpp
+  SetProperties.cpp
+  PropIDUtils.cpp
+  HashCalc.cpp
+  ExtractingFilePath.cpp
+  EnumDirItems.cpp
+  DefaultName.cpp
+  Bench.cpp
+  正在生成代码...
+  正在编译...
+  ArchiveOpenCallback.cpp
+  ArchiveExtractCallback.cpp
+  ZipStrong.cpp
+  ZipCrypto.cpp
+  WzAes.cpp
+  MyAesReg.cpp
+  MyAes.cpp
+  7zAesRegister.cpp
+  7zAes.cpp
+  XzEncoder.cpp
+  XzDecoder.cpp
+  ShrinkDecoder.cpp
+  QuantumDecoder.cpp
+  PpmdZip.cpp
+  PpmdRegister.cpp
+  PpmdEncoder.cpp
+  PpmdDecoder.cpp
+  LzxDecoder.cpp
+  LzOutWindow.cpp
+  LzmaRegister.cpp
+  正在生成代码...
+  正在编译...
+  LzmaEncoder.cpp
+  LzmaDecoder.cpp
+  Lzma2Register.cpp
+  Lzma2Encoder.cpp
+  Lzma2Decoder.cpp
+  ImplodeDecoder.cpp
+  DeltaFilter.cpp
+  DeflateRegister.cpp
+  DeflateEncoder.cpp
+  DeflateDecoder.cpp
+  Deflate64Register.cpp
+  CopyRegister.cpp
+  CopyCoder.cpp
+  BZip2Register.cpp
+  BZip2Encoder.cpp
+  BZip2Decoder.cpp
+  ByteSwap.cpp
+  BranchRegister.cpp
+  BranchMisc.cpp
+  BcjRegister.cpp
+  正在生成代码...
+  正在编译...
+  BcjCoder.cpp
+  Bcj2Register.cpp
+  Bcj2Coder.cpp
+  UniqBlocks.cpp
+  StreamObjects.cpp
+  StreamBinder.cpp
+  ProgressUtils.cpp
+  ProgressMt.cpp
+  OutMemStream.cpp
+  OutBuffer.cpp
+  OffsetStream.cpp
+  MethodProps.cpp
+  MemBlocks.cpp
+  LimitedStreams.cpp
+  InOutTempBuffer.cpp
+  FilterCoder.cpp
+  FileStreams.cpp
+  FilePathAutoRename.cpp
+  CWrappers.cpp
+  CreateCoder.cpp
+  正在生成代码...
+  正在编译...
+  ZipUpdate.cpp
+  ZipRegister.cpp
+  ZipOut.cpp
+  ZipItem.cpp
+  ZipIn.cpp
+  ZipHandlerOut.cpp
+  ZipHandler.cpp
+  ZipAddCommon.cpp
+  XzHandler.cpp
+  TarUpdate.cpp
+  TarRegister.cpp
+  TarOut.cpp
+  TarIn.cpp
+  TarHandlerOut.cpp
+  TarHandler.cpp
+  SplitHandler.cpp
+  LzmaHandler.cpp
+  GzHandler.cpp
+  OutStreamWithCRC.cpp
+  MultiStream.cpp
+  正在生成代码...
+  正在编译...
+  ItemNameUtils.cpp
+  InStreamWithCRC.cpp
+  HandlerOut.cpp
+  DummyOutStream.cpp
+  CoderMixer2.cpp
+  CabRegister.cpp
+  CabIn.cpp
+  CabHandler.cpp
+  CabBlockInStream.cpp
+  Bz2Handler.cpp
+  7zUpdate.cpp
+  7zSpecStream.cpp
+  7zRegister.cpp
+  7zProperties.cpp
+  7zOut.cpp
+  7zIn.cpp
+  7zHandlerOut.cpp
+  7zHandler.cpp
+  7zFolderInStream.cpp
+  7zExtract.cpp
+  正在生成代码...
+  正在编译...
+  7zEncode.cpp
+  7zDecode.cpp
+  PropVariantUtils.cpp
+  PropVariant.cpp
+  FileSystem.cpp
+  FileName.cpp
+  FileLink.cpp
+  FileIO.cpp
+  FileFind.cpp
+  FileDir.cpp
+  ErrorMsg.cpp
+  DLL.cpp
+  XzCrc64Reg.cpp
+  Wildcard.cpp
+  UTFConvert.cpp
+  StringConvert.cpp
+  StdOutStream.cpp
+  StdInStream.cpp
+  Sha256Reg.cpp
+  Sha1Reg.cpp
+  正在生成代码...
+  正在编译...
+  MyString.cpp
+  ListFileUtils.cpp
+  CrcReg.cpp
+  CommandLineParser.cpp
+  正在生成代码...

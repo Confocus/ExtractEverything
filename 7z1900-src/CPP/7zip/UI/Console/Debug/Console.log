@@ -1,0 +1,12 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+cl : 命令行 warning D9007: “/Gm”需要“/Zi 或 /ZI”；选项被忽略
+  MainAr.cpp
+MainAr.cpp(144): warning C4101: “e”: 未引用的局部变量
+MainAr.cpp(183): warning C4101: “s”: 未引用的局部变量
+MainAr.cpp(193): warning C4101: “s”: 未引用的局部变量
+MainAr.cpp(203): warning C4101: “s”: 未引用的局部变量
+MainAr.cpp(213): warning C4101: “s”: 未引用的局部变量
+MainAr.cpp(223): warning C4101: “t”: 未引用的局部变量
+MainAr.cpp(72): warning C4505: “PrintError”: 未引用的本地函数已移除
+d:\wangteng\code\7z1900-src\cpp\7zip\ui\console\mainar.cpp(134): warning C4702: 无法访问的代码
+  Console.vcxproj -> D:\WangTeng\code\pe-parse-master2\pe-parse-master\pe-parser-library\Debug\Console.lib
