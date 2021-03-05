@@ -3,6 +3,7 @@
 #include "ipackermatch.h"
 #include "parse.h"
 using namespace peparse;
+using namespace std;
 
 class CCmdLineParser
 {
@@ -21,9 +22,11 @@ public:
 	const std::string& GetOutputPath() const;
 
 private:
-	bool IsExistParam(const char* pParam) const;
-	bool GetParamIndex(const char* pParam, uint32_t* pIndex) const;
+	bool IsExistOption(const char* pParam) const;
+	//bool GetParamIndex(const char* pParam, uint32_t* pIndex) const;
 	void ConvertStrPathSlash(std::string& sPath);
+	bool IsValidOptions() const;
+	bool IsValidOption(const string& sParam) const;
 
 private:
 	bool m_bRecognize;
@@ -31,6 +34,8 @@ private:
 	std::string m_sTargetPath;
 	std::string m_sOutputPath;
 	std::string m_sTotalCmdline;
-	std::vector<std::string> m_vArgv;
+	std::map < const string, const string > m_mapOptValue;
+	//std::vector<std::string> m_vArgv;
+	vector<string> m_vecValidOption;
 };
 

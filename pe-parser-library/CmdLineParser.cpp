@@ -2,10 +2,15 @@
 #include <vector>
 #include <algorithm>
 
+using namespace std;
+
 CCmdLineParser::CCmdLineParser():
 	m_bRecognize(false),
 	m_bExtract(false)
 {
+	m_vecValidOption.push_back("-r");
+	m_vecValidOption.push_back("-o");
+	m_vecValidOption.push_back("-x");
 }
 
 CCmdLineParser::~CCmdLineParser()
@@ -15,65 +20,65 @@ CCmdLineParser::~CCmdLineParser()
 bool CCmdLineParser::Parse(const uint32_t argc, char** argv)
 {
 	CHECK_NULLPTR_ERR(argv);
+
+	string sProcessName = argv[0];
+
 	if (argc < 3)
 	{
 		printf("Not enough parameters..\n");
 		return false;
 	}
 
-	for (uint32_t i = 0; i < argc; i++)
+	//命令行都是成对的，加上进程本身，不会出现偶数个。
+	if (0 == argc % 2)
 	{
-		std::string sArgv = *(argv + i);
-		m_vArgv.push_back(sArgv);
+		printf("Incorrect parameters..\n");
+		return false;
 	}
 
-	//todo：命令行将\解析为转义字符导致-x后面的-o解析不出来。只需要把引号前面的\删除即可
-	if (IsExistParam("-r") && !IsExistParam("-x") && !IsExistParam("-o"))
+	for (uint32_t i = 1; i < argc - 1; i += 2)
 	{
-		m_bRecognize = true;
-		uint32_t uIndex = 0;
-		GetParamIndex("-r", &uIndex);
-		m_sTargetPath = m_vArgv[uIndex + 1];
-		//为了测试后边的路径矫正是否正确，暂时把这里的去掉了
-		//ConvertStrPathSlash(m_sTargetPath);
-		if (uIndex + 1 > argc)
+		m_mapOptValue.insert(pair<const string, const string>(*(argv + i), *(argv + i + 1)));
+	}
+
+	if (!IsValidOptions())
+	{
+		return false;
+	}
+
+	//todo：命令行将\解析为转义字符导致-x后面的-o解析不出来。只需要把引号前面的\删除即可。
+	//识别命令后面不跟解压、输出路径参数
+	if (IsExistOption("-r"))
+	{
+		if (IsExistOption("-x") || IsExistOption("-o"))
 		{
 			return false;
 		}
-		m_sTotalCmdline = m_vArgv[0] + " -r \"" + m_sTargetPath + "\"";
+
+		m_bRecognize = true;
+		m_sTargetPath = m_mapOptValue["-r"];
+		//为了测试后边的路径矫正是否正确，暂时把这里的去掉了
+		//ConvertStrPathSlash(m_sTargetPath);
+		m_sTotalCmdline = sProcessName + " -r \"" + m_sTargetPath + "\"";
 
 		return true;
 	}
-	else if (IsExistParam("-x"))
+	else if (IsExistOption("-x"))
 	{
 		m_bExtract = true;
-		uint32_t uIndex = 0;
-		GetParamIndex("-x", &uIndex);
-		if (uIndex + 1 > argc)
-		{
-			return false;
-		}
-
-		m_sTargetPath = m_vArgv[uIndex + 1];
+		m_sTargetPath = m_mapOptValue["-x"];
 		//ConvertStrPathSlash(m_sTargetPath);
 
-		if (IsExistParam("-o"))
+		if (IsExistOption("-o"))
 		{
-			uint32_t uIndex = 0;
-			GetParamIndex("-o", &uIndex);
-			if (uIndex + 1 > argc)
-			{
-				return false;
-			}
-
-			m_sOutputPath = m_vArgv[uIndex + 1];
+			m_sOutputPath = m_mapOptValue["-o"];
 			//ConvertStrPathSlash(m_sOutputPath);
-			m_sTotalCmdline = m_vArgv[0] + " -x \"" + m_sTargetPath + "\" -o\"" + m_sOutputPath + "\"";
+			m_sTotalCmdline = sProcessName + " -x \"" + m_sTargetPath + "\" -o\"" + m_sOutputPath + "\"";
 
 			return true;
 		}
 
-		m_sTotalCmdline = m_vArgv[0] + " -x \"" + m_vArgv[uIndex - 1] + "\"";
+		m_sTotalCmdline = sProcessName + " -x \"" + m_sTargetPath + "\"";
 
 		return true;
 	}
@@ -83,30 +88,11 @@ bool CCmdLineParser::Parse(const uint32_t argc, char** argv)
 	return false;
 }
 
-bool CCmdLineParser::IsExistParam(const char* pParam) const
+bool CCmdLineParser::IsExistOption(const char* pParam) const
 {
 	CHECK_NULLPTR_ERR(pParam);
-
 	std::string sParam = pParam;
-	std::vector <std::string>::const_iterator iter = find(m_vArgv.begin(), m_vArgv.end(), sParam);
-
-	return iter != m_vArgv.end();
-}
-
-bool CCmdLineParser::GetParamIndex(const char* pParam, uint32_t* pIndex) const
-{
-	CHECK_NULLPTR_ERR(pParam);
-	CHECK_NULLPTR_ERR(pIndex);
-
-	std::string sParam = pParam;
-	std::vector <std::string>::const_iterator iter = find(m_vArgv.begin(), m_vArgv.end(), sParam);
-	if (iter != m_vArgv.end())
-	{
-		*pIndex = distance(m_vArgv.begin(), iter);
-		return true;
-	}
-
-	return false;
+	return m_mapOptValue.find(sParam) != m_mapOptValue.end();
 }
 
 bool CCmdLineParser::IsOnlyRecognize() const
@@ -137,4 +123,23 @@ void CCmdLineParser::ConvertStrPathSlash(std::string& sPath)
 	{
 		sPath.erase(sPath.end() - 1);
 	}
+}
+
+bool CCmdLineParser::IsValidOptions() const
+{
+	for (auto iter = m_mapOptValue.begin(); iter != m_mapOptValue.end(); iter++)
+	{
+		if (!IsValidOption(iter->first))
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+bool CCmdLineParser::IsValidOption(const string& sParam) const
+{
+	auto iter = std::find(m_vecValidOption.begin(), m_vecValidOption.end(), sParam);
+	return (iter != m_vecValidOption.end());
 }
